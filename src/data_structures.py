@@ -225,9 +225,8 @@ class BinarySearchTree:
             no.chave = sucessor.chave
             no.dados = sucessor.dados
             no.direita = self._remover_rec(no.direita, sucessor.dados[0])
-        elif id_alvo < no.dados[0]:
-            no.esquerda = self._remover_rec(no.esquerda, id_alvo)
         else:
+            no.esquerda = self._remover_rec(no.esquerda, id_alvo)
             no.direita = self._remover_rec(no.direita, id_alvo)
         return no
 
