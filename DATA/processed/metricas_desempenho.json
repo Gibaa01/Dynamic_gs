@@ -1,0 +1,248 @@
+{
+  "forca_bruta": [
+    {
+      "N": 3,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.5251000038697384,
+      "memoria_mb": 0.00038909912109375,
+      "operacoes": 2,
+      "caminhos_avaliados": 0,
+      "melhor_custo": Infinity
+    },
+    {
+      "N": 4,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.014699995517730713,
+      "memoria_mb": 0.00055694580078125,
+      "operacoes": 3,
+      "caminhos_avaliados": 1,
+      "melhor_custo": 2.8
+    },
+    {
+      "N": 5,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.013399992894846946,
+      "memoria_mb": 0.00055694580078125,
+      "operacoes": 4,
+      "caminhos_avaliados": 1,
+      "melhor_custo": 2.5
+    },
+    {
+      "N": 6,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.02239999594166875,
+      "memoria_mb": 0.00058746337890625,
+      "operacoes": 5,
+      "caminhos_avaliados": 1,
+      "melhor_custo": 4.8
+    },
+    {
+      "N": 7,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.019699997210409492,
+      "memoria_mb": 0.00067138671875,
+      "operacoes": 7,
+      "caminhos_avaliados": 2,
+      "melhor_custo": 5.8
+    },
+    {
+      "N": 8,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.02179999864893034,
+      "memoria_mb": 0.00098419189453125,
+      "operacoes": 10,
+      "caminhos_avaliados": 0,
+      "melhor_custo": Infinity
+    },
+    {
+      "N": 9,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.0168999977177009,
+      "memoria_mb": 0.00098419189453125,
+      "operacoes": 10,
+      "caminhos_avaliados": 0,
+      "melhor_custo": Infinity
+    },
+    {
+      "N": 10,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.019099999917671084,
+      "memoria_mb": 0.00104522705078125,
+      "operacoes": 11,
+      "caminhos_avaliados": 1,
+      "melhor_custo": 0.5
+    },
+    {
+      "N": 11,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.027599999157246202,
+      "memoria_mb": 0.00131988525390625,
+      "operacoes": 16,
+      "caminhos_avaliados": 2,
+      "melhor_custo": 4.3
+    },
+    {
+      "N": 12,
+      "algoritmo": "Força Bruta",
+      "tempo_ms": 0.03650000144261867,
+      "memoria_mb": 0.00147247314453125,
+      "operacoes": 22,
+      "caminhos_avaliados": 3,
+      "melhor_custo": 5.3
+    }
+  ],
+  "prim": [
+    {
+      "N": 3,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.019999999494757503,
+      "memoria_mb": 0.00110626220703125,
+      "operacoes": 2,
+      "custo_total": 5.5
+    },
+    {
+      "N": 4,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.019999999494757503,
+      "memoria_mb": 0.00106048583984375,
+      "operacoes": 3,
+      "custo_total": 8.3
+    },
+    {
+      "N": 5,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.01679999695625156,
+      "memoria_mb": 0.00116729736328125,
+      "operacoes": 4,
+      "custo_total": 10.8
+    },
+    {
+      "N": 6,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.032800002372823656,
+      "memoria_mb": 0.00193023681640625,
+      "operacoes": 5,
+      "custo_total": 12.8
+    },
+    {
+      "N": 7,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.027800000680144876,
+      "memoria_mb": 0.00203704833984375,
+      "operacoes": 7,
+      "custo_total": 12.5
+    },
+    {
+      "N": 8,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.0261999957729131,
+      "memoria_mb": 0.00197601318359375,
+      "operacoes": 7,
+      "custo_total": 12.5
+    },
+    {
+      "N": 9,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.025000001187436283,
+      "memoria_mb": 0.00199127197265625,
+      "operacoes": 7,
+      "custo_total": 12.5
+    },
+    {
+      "N": 10,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.030000002880115062,
+      "memoria_mb": 0.00235748291015625,
+      "operacoes": 12,
+      "custo_total": 15.8
+    },
+    {
+      "N": 11,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.03789999755099416,
+      "memoria_mb": 0.00272369384765625,
+      "operacoes": 14,
+      "custo_total": 17.1
+    },
+    {
+      "N": 12,
+      "algoritmo": "Prim (Guloso)",
+      "tempo_ms": 0.03199999628122896,
+      "memoria_mb": 0.00272369384765625,
+      "operacoes": 16,
+      "custo_total": 18.9
+    }
+  ],
+  "dijkstra": [
+    {
+      "N": 3,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.010899995686486363,
+      "memoria_mb": 0.0007171630859375,
+      "operacoes": 2
+    },
+    {
+      "N": 4,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.014099998224992305,
+      "memoria_mb": 0.00077056884765625,
+      "operacoes": 4
+    },
+    {
+      "N": 5,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.011900003300979733,
+      "memoria_mb": 0.0008087158203125,
+      "operacoes": 6
+    },
+    {
+      "N": 6,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.019199993403162807,
+      "memoria_mb": 0.0015411376953125,
+      "operacoes": 8
+    },
+    {
+      "N": 7,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.02499999391147867,
+      "memoria_mb": 0.0015869140625,
+      "operacoes": 12
+    },
+    {
+      "N": 8,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.018799997633323073,
+      "memoria_mb": 0.0015869140625,
+      "operacoes": 12
+    },
+    {
+      "N": 9,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.01720000000204891,
+      "memoria_mb": 0.0016021728515625,
+      "operacoes": 12
+    },
+    {
+      "N": 10,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.021400002879090607,
+      "memoria_mb": 0.0016632080078125,
+      "operacoes": 22
+    },
+    {
+      "N": 11,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.027300004148855805,
+      "memoria_mb": 0.0022125244140625,
+      "operacoes": 26
+    },
+    {
+      "N": 12,
+      "algoritmo": "Dijkstra (Guloso)",
+      "tempo_ms": 0.025000001187436283,
+      "memoria_mb": 0.0022430419921875,
+      "operacoes": 30
+    }
+  ]
+}
