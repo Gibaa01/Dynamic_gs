@@ -100,6 +100,7 @@ class TestBST:
         bst.inserir(m2)
         bst.inserir(m3)
         assert len(bst.percurso_in_order()) == 3
+
         bst.remover(2)
         ordem = bst.percurso_in_order()
         assert len(ordem) == 2
@@ -132,9 +133,11 @@ class TestFilaPrioridade:
         fp.inserir(3.0, 1)
         fp.inserir(1.0, 2)
         fp.inserir(2.0, 3)
+
         custo1, _ = fp.extrair_min()
         custo2, _ = fp.extrair_min()
         custo3, _ = fp.extrair_min()
+
         assert custo1 <= custo2 <= custo3
 
     def test_vazia(self):
@@ -189,3 +192,69 @@ class TestForcaBruta:
 
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
+
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
+from greedy import AlgoritmoPrim, AlgoritmoDijkstra
+
+
+class TestPrim:
+
+    def test_mst_n_menos_1_arestas(self, grafo_rs):
+        prim = AlgoritmoPrim(grafo_rs)
+        resultado = prim.executar(4314902)
+        assert len(resultado["mst_arestas"]) == len(grafo_rs.vertices) - 1
+
+    def test_mst_custo_positivo(self, grafo_rs):
+        prim = AlgoritmoPrim(grafo_rs)
+        resultado = prim.executar(4314902)
+        assert resultado["custo_total"] > 0
+
+    def test_mst_instrumentacao(self, grafo_rs):
+        prim = AlgoritmoPrim(grafo_rs)
+        resultado = prim.executar(4314902)
+        assert resultado["insercoes_heap"] > 0
+        assert resultado["extracoes_heap"] > 0
+
+    def test_prim_grafo_simples(self, grafo_simples):
+        prim = AlgoritmoPrim(grafo_simples)
+        resultado = prim.executar(1)
+        assert len(resultado["mst_arestas"]) == len(grafo_simples.vertices) - 1
+        assert resultado["custo_total"] > 0
+
+
+class TestDijkstra:
+
+    def test_distancia_origem_zero(self, grafo_rs):
+        dijkstra = AlgoritmoDijkstra(grafo_rs)
+        resultado = dijkstra.executar(4314902)
+        assert resultado["dist"][4314902] == 0.0
+
+    def test_distancias_nao_negativas(self, grafo_rs):
+        dijkstra = AlgoritmoDijkstra(grafo_rs)
+        resultado = dijkstra.executar(4314902)
+        for d in resultado["dist"].values():
+            assert d >= 0
+
+    def test_caminho_reconstruido(self, grafo_rs):
+        dijkstra = AlgoritmoDijkstra(grafo_rs)
+        resultado = dijkstra.executar(4314902)
+        caminho = dijkstra.reconstruir_caminho(resultado["predecessor"], 4313409)
+        assert caminho[0] == 4314902
+        assert caminho[-1] == 4313409
+
+    def test_dijkstra_grafo_simples(self, grafo_simples):
+        dijkstra = AlgoritmoDijkstra(grafo_simples)
+        resultado = dijkstra.executar(1)
+        assert abs(resultado["dist"][4] - 2.5) < 1e-6
+
+    def test_todos_alcancados(self, grafo_rs):
+        dijkstra = AlgoritmoDijkstra(grafo_rs)
+        resultado = dijkstra.executar(4314902)
+        for d in resultado["dist"].values():
+            assert d < float("inf")
+
+    def test_arestas_relaxadas(self, grafo_rs):
+        dijkstra = AlgoritmoDijkstra(grafo_rs)
+        resultado = dijkstra.executar(4314902)
+        assert resultado["arestas_relaxadas"] > 0

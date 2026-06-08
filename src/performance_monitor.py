@@ -149,8 +149,8 @@ def calcular_gap(grafo: GrafoMunicipios, tamanhos: list[int]) -> list[dict]:
 
         gaps.append({
             "N": n,
-            "custo_fb": custo_fb,
-            "custo_prim": custo_prim,
+            "custo_fb": custo_fb if custo_fb != float("inf") else None,
+            "custo_prim": custo_prim if custo_prim != float("inf") else None,
             "gap_pct": gap,
         })
 

@@ -2,7 +2,7 @@
   "gaps": [
     {
       "N": 3,
-      "custo_fb": Infinity,
+      "custo_fb": null,
       "custo_prim": 5.5,
       "gap_pct": 0.0
     },
@@ -32,13 +32,13 @@
     },
     {
       "N": 8,
-      "custo_fb": Infinity,
+      "custo_fb": null,
       "custo_prim": 12.5,
       "gap_pct": 0.0
     },
     {
       "N": 9,
-      "custo_fb": Infinity,
+      "custo_fb": null,
       "custo_prim": 12.5,
       "gap_pct": 0.0
     },
