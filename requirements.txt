@@ -1,0 +1,10 @@
+Requirements · TXT
+networkx==3.3
+matplotlib==3.9.0
+seaborn==0.13.2
+geopandas==0.14.4
+shapely==2.0.4
+pytest==8.2.2
+jupyter==1.0.0
+pandas==2.2.2
+numpy==1.26.4
